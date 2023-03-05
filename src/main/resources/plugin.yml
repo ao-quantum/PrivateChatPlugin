@@ -1,0 +1,14 @@
+name: chatplugin
+version: '${version}'
+main: dev.quantumsoul.chat.ChatPlugin
+commands:
+  msg:
+    description: 'Send a message to a player'
+    usage: '/msg <player> <message>'
+    aliases: ['tell']
+  r:
+    description: 'Reply'
+    usage: '/r <message>'
+  dnd:
+    description: 'Toggle the dings from private messages'
+    usage: '/dnd'
