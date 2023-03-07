@@ -38,7 +38,6 @@ public class MoveListener implements Listener {
         Location loc1 = entity.getLocation().clone();
         double distance = loc1.distance(loc);
         Vector direction = loc1.subtract(loc).toVector();
-        List<ArmorStand> stands = new ArrayList<>();
         for (double i = 0.1; i < distance; i += 0.5) {
             direction.multiply(i);
             loc.add(direction);
@@ -48,14 +47,6 @@ public class MoveListener implements Listener {
             direction.normalize();
         }
 
-    }
-
-    private ArmorStand spawnAS(Location location) {
-        ArmorStand as = location.getWorld().spawn(location, ArmorStand.class);
-        as.setGravity(false);
-        as.setVisible(false);
-        as.setHelmet(new ItemStack(Material.DIAMOND_BLOCK));
-        return as;
     }
 
 }
